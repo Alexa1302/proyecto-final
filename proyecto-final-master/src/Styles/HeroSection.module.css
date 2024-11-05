@@ -1,0 +1,14 @@
+.hero {
+    background-image: url('../Assets/Images/encabezado.jpg'); /* Imagen de fondo para el encabezado */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    position: relative;
+    text-align: center;
+    padding: 100px 20px;
+  }
+  
+  .overlay {
+    background-color: rgba(59, 30, 84, 0.8); /* Color morado con transparencia */
+    padding: 50px;
+  }

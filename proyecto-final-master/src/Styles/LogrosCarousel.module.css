@@ -1,0 +1,24 @@
+.carousel {
+    background-color: #f7f3f9; /* Fondo claro */
+    padding: 40px;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .carousel h2 {
+    color: #3B1E54; /* Color morado */
+  }
+  
+  .slick-slide {
+    display: flex; /* Asegura que las imágenes se alineen correctamente */
+    justify-content: center;
+  }
+  
+  .images img {
+    width: 100%; /* Ajusta al 100% del contenedor */
+    height: auto; /* Mantiene la relación de aspecto */
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
