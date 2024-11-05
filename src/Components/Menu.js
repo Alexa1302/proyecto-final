@@ -54,16 +54,16 @@ const Menu = () => {
                         {isSubMenuOpen && (
                             <ul>
                                 <li>
-                                    <Link to="/Eventos/HackatonesNacionales">Hackatones Nacionales</Link>
+                                    <Link to="/HackatonesNacionales">Hackatones Nacionales</Link>
                                 </li>
                                 <li>
                                     <Link to="/Eventos/HackatonesInternacionales">Hackatones Internacionales</Link>
                                 </li>
                                 <li>
-                                    <Link to="/Eventos/RankingNacional">Ranking Nacional</Link>
+                                    <Link to="/RankingNacional">Ranking Nacional</Link>
                                 </li>
                                 <li>
-                                    <Link to="/Eventos/RankingInternacional">Ranking Internacional</Link>
+                                    <Link to="/RankingInternacional">Ranking Internacional</Link>
                                 </li>
                             </ul>
                         )}
