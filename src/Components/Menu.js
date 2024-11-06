@@ -57,19 +57,19 @@ const Menu = () => {
                         </span>
                         {isSubMenuOpen && (
                             <ul>
-                            <li>
-                                <Link to="/HackatonesNacionales">Hackatones Nacionales</Link>
-                            </li>
-                            <li>
-                                <Link to="/HackatonesInternacionales">Hackatones Internacionales</Link>
-                            </li>
-                            <li>
-                                <Link to="/RankingNacional">Ranking Nacional</Link>
-                            </li>
-                            <li>
-                                <Link to="/RankingInternacional">Ranking Internacional</Link>
-                            </li>
-                        </ul>
+                                <li>
+                                    <Link to="/Eventos/HackatonesNacionales">Hackatones Nacionales</Link>
+                                </li>
+                                <li>
+                                    <Link to="/Eventos/HackatonesInternacionales">Hackatones Internacionales</Link>
+                                </li>
+                                <li>
+                                    <Link to="/Eventos/RankingNacional">Ranking Nacional</Link>
+                                </li>
+                                <li>
+                                    <Link to="/Eventos/RankingInternacional">Ranking Internacional</Link>
+                                </li>
+                            </ul>
                         )}
                     </li>
                     {/* Aquí hemos cambiado el comportamiento del <Link> para manejar el click sin navegación */}
