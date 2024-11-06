@@ -1,15 +1,14 @@
 import React, { useState, useRef } from 'react';
 import Slider from "react-slick"; 
 import styles from '../Styles/Cursos.module.css'; 
-import cursoc from '../assets/curso-C++.jpg';
-import cursoJavaScrip from '../assets/Curs-JS.jpg';
-import pythonCurso from '../assets/PYTON-CURSO.jpg';
-import sqlCurso from '../assets/SQL-SERVER-curso.jpg';
-import sqlCursoBasico from '../assets/curso-basico-sql.jpg';
-import cursoReact from '../assets/curso-react.jpg';
-import cursAngular from '../assets/CursoAngular.jpg';
-import cursonodeJS from '../assets/cursoNodeJS.jpg';
-import cursoGitHub from '../assets/CursoGibHub.jpg';
+import cursoc from '../Assets/curso-C++.jpg';
+import cursoJavaScrip from '../Assets/Curs-JS.jpg';
+import pythonCurso from '../Assets/PYTON-CURSO.jpg';
+import sqlCurso from '../Assets/SQL-SERVER-curso.jpg';
+import sqlCursoBasico from '../Assets/curso-basico-sql.jpg';
+import cursAngular from '../Assets/CursoAngular.jpg';
+import cursonodeJS from '../Assets/cursoNodeJS.jpg';
+import cursoGitHub from '../Assets/CursoGibHub.jpg';
 
 const Cursos = () => {
   const [keyword, setKeyword] = useState('');
@@ -22,7 +21,7 @@ const Cursos = () => {
     { title: 'Curso de Python', image: pythonCurso, url: 'https://www.youtube.com/watch?app=desktop&v=czNjtWFsNRc' },
     { title: 'Curso de SQL Server', image: sqlCurso, url: 'https://www.youtube.com/watch?app=desktop&v=Zvz9fsNJd7s' },
     { title: 'Curso de SQL Server Basico', image: sqlCursoBasico, url: 'https://www.youtube.com/watch?v=j4VeiHGZVMA&list=PL6_-QWg-BIvG6fnexI0qFjOXAYK3ruVfr&index=1' },
-    { title: 'Curso de React', image: cursoReact, url: 'https://www.youtube.com/watch?v=dGcsHMXbSOA' },
+    { title: 'Curso de Node Advance', image: cursonodeJS, url: 'https://www.youtube.com/watch?v=dGcsHMXbSOA' },
     { title: 'Curso de Angular', image: cursAngular, url: 'https://www.youtube.com/watch?v=7RziWeAUcss' },
     { title: 'Curso de Node.js', image: cursonodeJS, url: 'https://www.youtube.com/watch?app=desktop&v=i3OdKwuBjeM' },
     { title: 'Curso de Git y GitHub', image: cursoGitHub, url: 'https://www.youtube.com/watch?v=mCVQgSyjCkI&list=PLQxX2eiEaqby-qh4raiKfYyb4T7WyHsfW' },
@@ -74,7 +73,7 @@ const Cursos = () => {
     <div className={styles.container}>
       <div className={styles.headerBox}>
         <h2>Femploy: Cursos Ofertados</h2>
-        <p>Explora nuestra selección de cursos gratuitos en desarrollo web, programación y tecnologías modernas. ¡Empieza a aprender hoy!</p>
+        <p className={styles.headerParrafo}>Explora nuestra selección de cursos gratuitos en desarrollo web, programación y tecnologías modernas. ¡Empieza a aprender hoy!</p>
               
       </div>
 
@@ -162,7 +161,7 @@ const Cursos = () => {
     
   </div>
   <div className={styles.footerBottom}>
-    <p>&copy; 2024 Femploy. Todos los derechos reservados.</p>
+    <p className= {styles.footerParrafo}>&copy; 2024 Femploy. Todos los derechos reservados.</p>
   </div>
 </footer>
 

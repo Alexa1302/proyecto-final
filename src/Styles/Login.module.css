@@ -9,7 +9,7 @@ img{
         object-fit: cover;
         height: 100%;
         width: 100%;
-        background-image: url(../assets/img1.png);
+        background-image: url(../Assets/img1.png);
       background-size: cover;
     
     }

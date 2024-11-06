@@ -8,12 +8,25 @@
   background-color: #FFF;
   border-radius: 10px;
   box-shadow: 0 4px 12px #8a8989d0;
-  background-image: url('../assets/mujeres.jpeg');
+  background-image: url('../Assets/mujeres.jpeg');
   background-repeat: no-repeat;
   min-height: 100vh;
-  color: #0f0f0f;
+  color: #0f0f0f; 
 }
 
+.correcioninput {
+  background-color: white;
+  color: white;
+}
+
+.correcionh3 {
+  font-family:'Open Sans', sans-serif !important;
+  margin-left: 0;
+  font-size: inherit;
+  color: #EEEEEE;
+  text-align: center;
+  text-shadow:none;
+}
 
 .jobImage {
   align-items: center;
@@ -39,7 +52,7 @@
 }
 
 .headerBox {
-  background-color: rgba(247, 245, 248, 0.8);
+  background-color: rgba(212, 190, 228, 0.4); 
   padding: 20px;
   border-radius: 8px;
   text-align: center;
@@ -47,7 +60,7 @@
 }
 
 h2 {
-  color: #3b1e54;
+  color: #3B1E54;
   border-bottom: 2px solid #e3e3e3;
   padding-bottom: 10px;
   text-align: center;
@@ -98,18 +111,22 @@ button {
 
 button:hover {
   align-items: flex-end;
-  background-color: #3B1e54;
+  background-color: #3B1E54;
 }
 
 .suggestionBox {
-  border: 1px #a25bb9;
+  font-size:1.5rem;
+  color: #3B1E54;
+  border: 1px #A252B9;
   padding: 30px;
   margin-bottom: 20px;
   border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(212, 190, 228, 0.4); 
   position: relative;
   text-align: center;
 }
+
+
 
 .suggestion-header {
   display: flex;
@@ -214,6 +231,8 @@ button:hover {
   color: #666;
 }
 
+
+
 .job-card button {
   padding: 8px 16px;
   background-color: #9b7eb0;
@@ -226,7 +245,7 @@ button:hover {
 }
 
 .job-card button:hover {
-  background-color: #3b1e54;
+  background-color: #3B1E54;
 }
 
 .searchOptions {
@@ -236,8 +255,10 @@ button:hover {
   margin-top: 10px;
 }
 
-.footer {
-  background-color: rgba(255, 255, 255, 0.8);
+footer {
+  font-size: 0.9rem;
+  color: #EEEEEE;
+  background-color: rgba(59, 30, 84, 0.90) ; 
   margin-top: 20px;
   padding: 10px;
   text-align: center;
@@ -299,6 +320,10 @@ button:hover {
 .jobCard p {
   color: #555;
   font-size: 0.9rem;
+  font-family: 'Open Sans', sans-serif;
+  text-align: left;
+  margin-left: auto;
+  text-shadow: none;
 }
 
 .jobCard button {
@@ -313,7 +338,7 @@ button:hover {
 }
 
 .jobCard button:hover {
-  background-color: #3b1e54;
+  background-color: #3B1E54;
 }
 
 .flagImage {

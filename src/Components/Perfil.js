@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import styles from '../Styles/Perfil.module.css';
-import profileImage from '../assets/fotoPerfilMujer.jpeg';
-import profileSugerencia from '../assets/perfilimagen.jpeg';
-import empleoImagen from '../assets/empleoNotificacion.jpg';
-import empleoImagen2 from '../assets/EMPLEO2.jpg';
-import empleoImagen3 from '../assets/EMPLEO3.jpg';
-import empleoImagen4 from '../assets/EMPLEO4.jpg';
+import profileImage from '../Assets/fotoPerfilMujer.jpeg';
+import profileSugerencia from '../Assets/perfilimagen.jpeg';
+import empleoImagen from '../Assets/empleoNotificacion.jpg';
+import empleoImagen2 from '../Assets/EMPLEO2.jpg';
+import empleoImagen3 from '../Assets/EMPLEO3.jpg';
+import empleoImagen4 from '../Assets/EMPLEO4.jpg';
 
 
 const Perfil = () => {

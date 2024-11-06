@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import styles from '../Styles/Empleos.module.css';
-import microsoftLogo from '../assets/microsoft.png';
-import googleLogo from '../assets/google.png';
-import amazonLogo from '../assets/amazon.png';
-import gitHubLogo from '../assets/gitHub.png';
-import mujerBackend from '../assets/mujer-backend.jpg';
-import mujerMoviles from '../assets/mujerMoviles.jpg';
-import mujerFrontend from '../assets/mujerFrontend.jpg';
-import mujerAsistente from '../assets/mujer-asistente.jpg';
-import mujerNubes from '../assets/MujerNubes.jpeg';
-import mujerGerente from '../assets/mujerGerente.jpg';
-import mujerIngeniera from '../assets/mujerIngeniera.jpg';
+import microsoftLogo from '../Assets/microsoft.png';
+import googleLogo from '../Assets/google.png';
+import amazonLogo from '../Assets/amazon.png';
+import gitHubLogo from '../Assets/gitHub.png';
+import mujerBackend from '../Assets/mujer-backend.jpg';
+import mujerMoviles from '../Assets/mujerMoviles.jpg';
+import mujerFrontend from '../Assets/mujerFrontend.jpg';
+import mujerAsistente from '../Assets/mujer-asistente.jpg';
+import mujerNubes from '../Assets/MujerNubes.jpeg';
+import mujerGerente from '../Assets/mujerGerente.jpg';
+import mujerIngeniera from '../Assets/mujerIngeniera.jpg';
 
 
 
@@ -150,8 +150,8 @@ const Empleos = () => {
         </div>
       )}
 
-      <input
-        type="text"
+      <input className={styles.correcioninput}
+              type="text"
         placeholder="Palabra clave"
         value={keyword}
         onChange={handleKeywordChange}
@@ -208,7 +208,7 @@ const Empleos = () => {
             <img className={styles.logo} src={gitHubLogo} alt="GitHub" />
           </a>
         </div>
-        <p>
+        <p className={styles.correcionh3}>
           Agradecemos a nuestros patrocinadores por su invaluable apoyo a nuestra misión de empoderar a las mujeres en el mundo laboral.<br />
           Empresas como Microsoft, Google, Amazon y GitHub se unen a nuestro esfuerzo por crear oportunidades de desarrollo<br />
           y crecimiento profesional.

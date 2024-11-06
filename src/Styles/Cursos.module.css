@@ -1,22 +1,23 @@
+
 .container {
     max-width: 1200px;
     margin: 20px auto;
     padding: 20px;
     font-family: Arial, sans-serif;
     color: #3B1E54;
-    background-color: rgba(255, 255, 255, 0.9); 
+    background-color: rgba(212, 190, 228, 0.4);
     border-radius: 10px;
     box-shadow: 0 4px 12px #8a8989d0;
-    background-image: url('../assets/Mujer.estudiando.jpg'); 
+    background-image: url('../Assets/Mujer.estudiando.jpg');
     background-repeat: no-repeat;
-    background-size: cover; 
-    background-position: center; 
-    background-attachment: fixed; 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     min-height: 100vh;
 }
 
 .headerBox {
-    background-color: rgba(248, 245, 245, 0.8);
+    background-color: rgba(212, 190, 228, 0.4);
     padding: 20px;
     border-radius: 8px;
     text-align: center;
@@ -26,23 +27,26 @@
 .searchContainer {
     padding: 1px;
     font-size: 0.9rem;
-    display: flex; 
-    justify-content: center; 
-    margin: 20px 0; 
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
 }
 
 .searchContainer input {
-    width: 300px; 
+    width: 300px;
     padding: 12px;
-    margin-right: 10px; 
+    margin-right: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
+    background-color: white;
+    color: white;
+
 }
 
 .searchContainer button {
     margin: 10px 0;
     padding: 10px 20px;
-    background-color: #9b7eb0;
+    background-color: #9B7EBD;
     color: white;
     border: none;
     border-radius: 5px;
@@ -68,7 +72,7 @@
 
 .resultsHeader h3 {
     color: #3B1E54;
-    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+    background-color: rgba(212, 190, 228, 0.3);
     font-size: 2rem;
 }
 
@@ -86,18 +90,18 @@
     background-color: rgba(255, 255, 255, 0.8);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s;
-    width: 90%; 
-    max-width: 300px; 
-    margin: 0 auto; 
+    width: 90%;
+    max-width: 300px;
+    margin: 0 auto;
 }
 
 .courseCard:hover {
-    transform: scale(1.05); 
+    transform: scale(1.05);
 }
 
 .courseCard h4 {
     margin: 0 0 10px;
-    color: #9B7EBD;
+    color: #3B1E54;
 }
 
 .courseCard p {
@@ -122,63 +126,63 @@
 
 .slick-slider {
     max-width: 100%;
-    margin: 0; 
-    padding: 20px; 
-    background-color: rgba(255, 255, 255, 0.9); 
-    border-radius: 10px; 
+    margin: 0;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .slick-slide {
-    margin: 0 20px; 
-    height: 300px; 
+    margin: 0 20px;
+    height: 300px;
     color: #3B1E54;
-    transition: transform 0.3s; 
+    transition: transform 0.3s;
 }
 
 .slick-slide:hover {
-    transform: scale(1.05); 
+    transform: scale(1.05);
 }
 
 .slick-prev:before,
 .slick-next:before {
-    color: #3B1E54; 
-    font-size: 24px; 
+    color: #3B1E54;
+    font-size: 24px;
 }
 
 .slick-dots li button:before {
-    color: #3B1E54; 
-    font-size: 16px; 
+    color: #3B1E54;
+    font-size: 16px;
 }
 
 .slick-dots li.slick-active button:before {
-    color: #9B7EB0;
+    color: #9B7EBD;
 }
 
 .courseImage {
-    width: 100%; 
-    height: auto; 
-    border-radius: 8px; 
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
     margin-bottom: 10px;
 }
 
 @media (max-width: 1024px) {
     .searchContainer input {
-        width: 200px; 
+        width: 200px;
     }
 
     .resultsHeader h3 {
-        font-size: 1.5rem; 
+        font-size: 1.5rem;
     }
 
     .courseCard {
-        max-width: 90%; 
+        max-width: 90%;
     }
 }
 
 @media (max-width: 768px) {
     .courseList {
-        display: block; 
+        display: block;
     }
 
     .courseCard {
@@ -187,22 +191,23 @@
     }
 
     .searchContainer input {
-        width: 100%; 
+        width: 100%;
     }
 }
 
 @media (max-width: 480px) {
     .headerBox {
-        font-size: 0.8rem; 
+        font-size: 0.8rem;
     }
 
     .searchContainer button {
-        padding: 8px 16px; 
-        font-size: 14px; 
+        padding: 8px 16px;
+        font-size: 14px;
     }
 }
+
 .headerBox h2 {
-    font-size: 3rem; 
+    font-size: 3rem;
     color: #3B1E54;
     font-weight: bold;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
@@ -211,14 +216,17 @@
 
 .headerBox p {
     font-size: 1.5rem;
+    font-family: 'Open Sans', sans-serif;
+    color: #3B1E54;
+    text-shadow: none;
 }
 
 .footer {
-    background-color: rgba(59, 30, 84, 0.85); 
+    background-color: rgba(59, 30, 84, 0.90);
     color: white;
     padding: 20px 10px;
     text-align: center;
-    border-top: 2px solid #9B7EB0;
+    border-top: 2px solid #9B7EBD;
     margin-top: 20px;
     border-radius: 5px;
 }
@@ -226,46 +234,62 @@
 
 .footerContent {
     display: block;
-     justify-content: space-between;
+    justify-content: space-between;
     max-width: 800px;
     margin: 0 auto;
 }
 
 .footerSection {
-        margin: 10px 0;
+    margin: 10px 0;
     min-width: 200px;
 }
 
 .footerSection h4 {
     font-size: 1.9rem;
-    color: #9B7EB0;
+    color: #9B7EBD;
     margin-bottom: 5px;
 }
 
 .footerSection p,
 .footerSection ul {
+    font-family: sans-serif;
+    text-align: center;
     margin-top: 0%;
-    padding:0cap;
+    padding: 0cap;
     font-size: 1rem;
     color: #E0E0E0;
+    margin-left: auto;
+
 }
+
 .footerBottom {
-    margin-top: 0px; 
-    font-size: 0.7rem; 
+    text-align: center;
+    margin-top: 0px;
+    font-size: 0.7rem;
     color: #E0E0E0;
+    text-shadow: none;
 }
 
 .footerSection ul {
+    margin-top: auto;
     list-style-type: none;
     padding: 0;
 }
 
+.footerParrafo {
+    text-align: center;
+    margin-left: 0px;
+    font-size: 0.9rem;
+}
+
+.headerParrafo {
+    text-align: center;
+    margin-left: auto;
+
+}
 
 .footerSection ul li a {
     color: #E0E0E0;
     text-decoration: none;
     transition: color 0.3s;
 }
-
-
-

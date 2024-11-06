@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
-import Styles from "../Styles/RankingNacional.css";
-import img3 from "../assets/img3.png";
+import Styles from "../Styles/RankingNacional.module.css";
+import img3 from "../Assets/img3.png";
 
 const RankingNacional = () => {
     const dato = [

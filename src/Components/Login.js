@@ -1,7 +1,7 @@
 import React from 'react';
-import img1 from "../assets/img1.png";
+import img1 from "../Assets/img1.png";
 
-import Styles from "../Styles/Login.css";
+import Styles from "../Styles/Login.module.css";
 import { MdEmail } from "react-icons/md";
 import { RiLockPasswordFill } from "react-icons/ri";
 import { FcGoogle } from "react-icons/fc";

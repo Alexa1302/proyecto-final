@@ -2,7 +2,7 @@
 .container {
   display: flex;
   flex-direction: column;
-  background-image: url('../assets/imagenPerfil3.jpeg');
+  background-image: url('../Assets/imagenPerfil3.jpeg');
   background-size: cover;
   padding: 10px;
 }
