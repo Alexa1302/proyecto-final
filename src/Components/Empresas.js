@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import styles from '../Styles/Empresas.module.css';
+import Footer from '../Components/Footer';
 
 const empresasData = [
     { id: 1, nombre: 'Key Code', sector: 'Tecnología', url: 'https://www.keycode.com.co/' },
@@ -63,6 +64,7 @@ const Empresas = () => {
                     </div>
                 ))}
             </div>
+            <Footer />
         </div>
     );
 };

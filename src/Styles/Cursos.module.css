@@ -1,18 +1,18 @@
 .container {
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 20px;
-    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    overflow: visible !important;
+    margin: 0px auto;
+    padding: 0px;
     color: #3B1E54;
-    background-color: rgba(212, 190, 228, 0.4);
+    background-color: rgba(231, 177, 177, 0.4);
     border-radius: 10px;
-    box-shadow: 0 4px 12px #8a8989d0;
+    box-shadow: 0 4px 12px #ecb6b6d0;
     background-image: url('../Assets/Mujer.estudiando.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    min-height: 100vh;
+    
 }
 
 .headerBox {
@@ -38,8 +38,8 @@
     border: 1px solid #ddd;
     border-radius: 5px;
     background-color: white;
-    color: white;
-
+    color: rgb(36, 33, 33);
+font-size: 13px;
 }
 
 .searchContainer button {
@@ -50,7 +50,7 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 13px;
     transition: background-color 0.3s;
 }
 
@@ -72,18 +72,19 @@
 .resultsHeader h3 {
     color: #3B1E54;
     background-color: rgba(212, 190, 228, 0.3);
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 .courseGrid {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 30px;
     justify-content: center;
 }
 
 .courseCard {
     padding: 20px;
+    box-sizing: border-box;
     border: 1px solid #ddd;
     border-radius: 8px;
     background-color: rgba(255, 255, 255, 0.8);
@@ -91,7 +92,9 @@
     transition: transform 0.2s;
     width: 90%;
     max-width: 300px;
-    margin: 0 auto;
+    margin: 20px ;
+    margin-left: 40px;
+    margin-right: 40px;
 }
 
 .courseCard:hover {
@@ -107,6 +110,22 @@
     font-size: 0.9rem;
     color: #666;
 }
+
+.courseCard button {
+    background-color: #9B7EBD; 
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .courseCard button:hover {
+    background-color: #3B1E54; 
+  }
+  
 
 .enrollButton {
     padding: 8px 16px;
@@ -124,47 +143,56 @@
 }
 
 .slick-slider {
-    max-width: 100%;
-    margin: 0;
+    overflow: visible !important;
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    position: relative; 
 }
 
-.slick-slide {
-    margin: 0 20px;
-    height: 300px;
-    color: #3B1E54;
-    transition: transform 0.3s;
-}
-
-.slick-slide:hover {
-    transform: scale(1.05);
-}
-
-.slick-prev:before,
-.slick-next:before {
-    color: #3B1E54;
-    font-size: 24px;
-}
-
-.slick-dots li button:before {
-    color: #3B1E54;
-    font-size: 16px;
-}
-
-.slick-dots li.slick-active button:before {
-    color: #9B7EBD;
-}
 
 .courseImage {
     width: 100%;
     height: auto;
-    border-radius: 8px;
+    border-radius: 10px;
     margin-bottom: 10px;
-}
 
+}
+.sliderContainer {
+    position: relative;
+    width: 100%;
+  }
+  
+  
+  .prevButton,
+  .nextButton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color:rgba(155, 126, 189, 1); 
+    color: white; 
+    border: none;
+    border-radius: 50%; 
+    width: 40px; 
+    height: 40px; 
+    font-size: 18px; 
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease; 
+    z-index: 1; 
+  }
+  .prevButton:hover,
+  .nextButton:hover {
+    background-color: rgba(59, 30, 84, 0.9); 
+  }
+  
+  .prevButton {
+    left: 10px; 
+  }
+  
+  .nextButton {
+    right: 10px; 
+  }
 @media (max-width: 1024px) {
     .searchContainer input {
         width: 200px;
@@ -175,7 +203,18 @@
     }
 
     .courseCard {
-        max-width: 90%;
+        max-width: 95%;
+        
+    }
+    body {
+        font-size: 14px;
+      }
+      .slick-prev {
+        left: -30px;
+    }
+    
+    .slick-next {
+        right: -30px;
     }
 }
 
@@ -186,11 +225,18 @@
 
     .courseCard {
         width: 100%;
-        margin-bottom: 20px;
+        margin-bottom: 50px;
     }
 
     .searchContainer input {
         width: 100%;
+    }
+    .slick-prev {
+        left: -30px;
+    }
+    
+    .slick-next {
+        right: -30px;
     }
 }
 
@@ -206,89 +252,10 @@
 }
 
 .headerBox h2 {
-    font-size: 3rem;
+    font-size: 2rem;
     color: #3B1E54;
     font-weight: bold;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-    margin: 0;
-}
-
-.headerBox p {
-    font-size: 1.5rem;
-    font-family: 'Open Sans', sans-serif;
-    color: #3B1E54;
-    text-shadow: none;
-}
-
-.footer {
-    background-color: rgba(59, 30, 84, 0.90);
-    color: white;
-    padding: 20px 10px;
-    text-align: center;
-    border-top: 2px solid #9B7EBD;
-    margin-top: 20px;
-    border-radius: 5px;
-}
-
-
-.footerContent {
-    display: block;
-    justify-content: space-between;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.footerSection {
-    margin: 10px 0;
-    min-width: 200px;
-}
-
-.footerSection h4 {
-    font-size: 1.9rem;
-    color: #9B7EBD;
-    margin-bottom: 5px;
-}
-
-.footerSection p,
-.footerSection ul {
-    font-family: sans-serif;
-    text-align: center;
-    margin-top: 0%;
-    padding: 0cap;
-    font-size: 1rem;
-    color: #E0E0E0;
-    margin-left: auto;
-
-}
-
-.footerBottom {
-    text-align: center;
-    margin-top: 0px;
-    font-size: 0.7rem;
-    color: #E0E0E0;
-    text-shadow: none;
-}
-
-.footerSection ul {
-    margin-top: auto;
-    list-style-type: none;
-    padding: 0;
-}
-
-.footerParrafo {
-    text-align: center;
-    margin-left: 0px;
-    font-size: 0.9rem;
-}
-
-.headerParrafo {
-    text-align: center;
-    margin-left: auto;
-
-}
-
-.footerSection ul li a {
-    color: #E0E0E0;
-    text-decoration: none;
-    transition: color 0.3s;
+    margin: 40px;
+    line-height: 1;
 }

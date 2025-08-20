@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import { useState, useRef } from 'react';
 import Slider from "react-slick"; 
 import styles from '../Styles/Cursos.module.css'; 
 import cursoc from '../Assets/curso-C++.jpg';
@@ -9,6 +9,8 @@ import sqlCursoBasico from '../Assets/curso-basico-sql.jpg';
 import cursAngular from '../Assets/CursoAngular.jpg';
 import cursonodeJS from '../Assets/cursoNodeJS.jpg';
 import cursoGitHub from '../Assets/CursoGibHub.jpg';
+import Footer from "../Components/Footer";
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
 const Cursos = () => {
   const [keyword, setKeyword] = useState(''); 
@@ -32,6 +34,13 @@ const Cursos = () => {
 
   const handleSearch = () => {
   };
+  const goToNext = () => {
+    sliderRef.current.slickNext();
+  };
+
+  const goToPrev = () => {
+    sliderRef.current.slickPrev();
+  };
 
   const filteredCourses = keyword 
     ? allCourses.filter(course =>
@@ -42,18 +51,20 @@ const Cursos = () => {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 2500,
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true, 
-    autoplaySpeed: 1000,
+    autoplaySpeed: 3000,
+    arrows: false, 
     responsive: [
       {
         breakpoint: 1024,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
-          dots: true
+          dots: true,
+          arrows: false
         }
       },
       {
@@ -61,16 +72,19 @@ const Cursos = () => {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          dots: true
+          dots: true,
+          arrows: true, 
         }
       }
     ]
   };
 
+
+
   return (
     <div className={styles.container}>
       <div className={styles.headerBox}>
-        <h2>Femploy: Cursos Ofertados</h2>
+        <h2> Cursos Ofertados</h2>
         <p className={styles.headerParrafo}>Explora nuestra selección de cursos gratuitos en desarrollo web, programación y tecnologías modernas. ¡Empieza a aprender hoy!</p>
               
       </div>
@@ -115,55 +129,39 @@ const Cursos = () => {
     </div>
   ) : (
     
-    <Slider ref={sliderRef} {...settings}>
-      {filteredCourses.map((course, index) => (
-        <div key={index} className={styles.courseCard}>
-          <a
-            href={course.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.courseLink}
-          >
-            <img
-              src={course.image}
-              alt={course.title}
-              className={styles.courseImage}
-            />
-            <h4>{course.title}</h4>
-          </a>
-          <button onClick={() => window.open(course.url, "_blank")}>
-            Hacer Curso
-          </button>
-        </div>
-      ))}
-    </Slider>
-  )}
+    <div className={styles.sliderContainer}>
+            <button className={styles.prevButton} onClick={goToPrev}>
+  <FaChevronLeft />
+</button>
+            <Slider ref={sliderRef} {...settings}>
+              {filteredCourses.map((course, index) => (
+                <div key={index} className={styles.courseCard}>
+                  <a
+                    href={course.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.courseLink}
+                  >
+                    <img
+                      src={course.image}
+                      alt={course.title}
+                      className={styles.courseImage}
+                    />
+                    <h4>{course.title}</h4>
+                  </a>
+                  <button onClick={() => window.open(course.url, "_blank")}>
+                    Hacer Curso
+                  </button>
+                </div>
+              ))}
+            </Slider>
+            <button className={styles.nextButton} onClick={goToNext}>
+  <FaChevronRight /> 
+</button>
+          </div>
+        )}
+<Footer />
 </div>
-<footer className={styles.footer}>
-  <div className={styles.footerContent}>
-    <div className={styles.footerSection}>
-      <h4>Sobre Femploy</h4>
-      <p>
-        Una plataforma creada para impulsar la empleabilidad de mujeres en tecnología. Accede a cursos, oportunidades y más.
-      </p>
-    </div>
-    <div className={styles.footerSection}>
-      <h4>Enlaces Útiles</h4>
-      <ul>
-        <li><a href="/about">Sobre Nosotros</a></li>
-        <li><a href="/contact">Contacto</a></li>
-        <li><a href="/terms">Términos de Servicio</a></li>
-        <li><a href="/privacy">Política de Privacidad</a></li>
-      </ul>
-    </div>
-    
-  </div>
-  <div className={styles.footerBottom}>
-    <p className= {styles.footerParrafo}>&copy; 2024 Femploy. Todos los derechos reservados.</p>
-  </div>
-</footer>
-
-
     </div>
   );
 };

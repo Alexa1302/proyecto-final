@@ -1,0 +1,167 @@
+/* Contenedor principal */
+.contAiner {
+    margin-top: 50px;
+    width: 100%;                /* El contenedor ocupa todo el ancho de la pantalla */
+    background-color: #EEEEEE;  /* Color de fondo del contenedor */
+    color: #3B1E54;             /* Color del texto dentro del contenedor */
+    text-align: center;         /* Centra el contenido horizontalmente */
+    min-height: 100vh;          /* Asegura que el contenedor ocupe al menos toda la altura de la pantalla */
+    display: flex;              /* Usamos flexbox para organizar el contenido */
+    flex-direction: column;     /* Los elementos se apilan verticalmente */
+    align-items: center;        /* Centra los elementos horizontalmente */
+    justify-content: flex-start;/* Empuja los elementos hacia arriba */
+    overflow-x: hidden;         /* Elimina el desplazamiento horizontal */
+}
+
+/* Título principal */
+.tittulo {
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    margin-top: 20px;
+    font-size: 24px;
+    color: #EEEEEE;
+    margin-bottom: 25px;
+    text-align: center;
+    background-color: #3B1E54;
+    padding: 10px;
+}
+
+/* Contenedor de tarjetas */
+.containerCard {
+    display: flex;                  /* Usamos flexbox para distribuir las tarjetas */
+    flex-wrap: wrap;                /* Permite que las tarjetas se muevan a la siguiente fila cuando no haya espacio suficiente */
+    justify-content: center;        /* Centra las tarjetas horizontalmente */
+    gap: 30px;                      /* Espacio entre las tarjetas */
+}
+
+/* Estilos para cada tarjeta */
+.ProfileCard {
+    margin-bottom: 20px;
+    background-color: #D4BEE4;      /* Fondo de la tarjeta */
+    width: 280px;                   /* Ancho fijo para las tarjetas */
+    padding: 20px;                  /* Espacio dentro de las tarjetas */
+    border-radius: 10px;            /* Bordes redondeados para las tarjetas */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Sombra suave alrededor de la tarjeta */
+    text-align: center;             /* Centra el texto dentro de la tarjeta */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;  /* Efecto suave al hacer hover sobre la tarjeta */
+}
+
+/* Efecto hover para la tarjeta */
+.ProfileCard:hover {
+    transform: translateY(-10px);           /* Eleva la tarjeta al hacer hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada al hacer hover */
+}
+
+/* Títulos de las tarjetas */
+.ProfileName {
+    font-size: 24px;                    /* Tamaño de la fuente */
+    font-weight: 600;                   /* Peso de la fuente */
+    color: #3B1E54;                     /* Color del texto */
+    margin-bottom: 10px;                /* Espacio debajo del título */
+    text-transform: uppercase;          /* Convierte el texto a mayúsculas */
+    letter-spacing: 1px;                /* Espaciado entre las letras */
+}
+
+/* Descripción dentro de las tarjetas */
+.ProfileDescription {
+    font-size: 14px;                    /* Tamaño de la fuente */
+    color: #341B54;                     /* Color del texto */
+    margin-bottom: 20px;                /* Espacio debajo de la descripción */
+    line-height: 1.5;                   /* Espaciado entre las líneas de texto */
+    text-align: left;                   /* Alinea el texto a la izquierda */
+}
+
+/* Botón de inscripción */
+
+.ProfileButton {
+    width: 100%; /* Asegura que el contenedor del botón ocupe todo el ancho disponible */
+    display: flex; /* Flexbox para alinear el contenido del contenedor */
+    justify-content: center; /* Centra el botón dentro del contenedor */
+}
+
+.ProfileButton button {
+    background-color: #EEEEEE;
+    color: #341B54;
+    margin-top: 20px;                  /* Añadimos margen superior para separarlo de otros elementos */
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    display: block;                    /* Hace que el botón sea un bloque y ocupe todo el ancho disponible */
+    width: 70%;                        /* Asegura que todos los botones tengan el mismo ancho */
+}
+
+/* Efecto hover para el botón */
+.ProfileButton button:hover {
+    background-color: #341B54;
+    color: #EEEEEE;
+    transform: scale(1.10);
+}
+
+/* Estilos Responsive */
+
+/* Para pantallas menores a 768px (tablets y móviles en horizontal) */
+@media (max-width: 768px) {
+    .contAiner {
+        padding: 10px;
+    }
+    
+    .tittulo {
+        font-size: 20px;
+        padding: 8px;
+    }
+
+    .containerCard {
+        gap: 20px;
+    }
+
+    .ProfileCard {
+        width: 90%;
+        max-width: 300px;
+    }
+
+    .ProfileName {
+        font-size: 20px;
+    }
+
+    .ProfileDescription {
+        font-size: 13px;
+    }
+
+    .ProfileButton button {
+        width: 80%;
+    }
+}
+
+/* Para pantallas menores a 480px (móviles en vertical) */
+@media (max-width: 480px) {
+    .tittulo {
+        font-size: 18px;
+        padding: 6px;
+    }
+
+    .containerCard {
+        gap: 15px;
+    }
+
+    .ProfileCard {
+        width: 100%;
+        max-width: 280px;
+        padding: 15px;
+    }
+
+    .ProfileName {
+        font-size: 18px;
+    }
+
+    .ProfileDescription {
+        font-size: 12px;
+    }
+
+    .ProfileButton button {
+        width: 90%;
+        font-size: 14px;
+        padding: 8px;
+    }
+}

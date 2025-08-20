@@ -13,8 +13,9 @@ html, body {
 
 /* Estilos para el footer */
 .footer {
+  border-radius: 0; /* Elimina cualquier borde redondeado */
   background-color: #3B1E54; /* Color morado oscuro */
-  color: white; /* Texto blanco */
+  color: #EEEEEE; /* Texto blanco */
   text-align: center; /* Centrado del texto */
   padding: 20px 0; /* Padding superior e inferior */
   font-size: 1rem; /* Tamaño de fuente ajustado para hacerlo más pequeño */
@@ -33,6 +34,7 @@ html, body {
   letter-spacing: 0.5px; /* Espaciado de letras para mayor claridad */
   line-height: 1.5; /* Espaciado entre las líneas */
 }
+
 
 /* Media Queries para hacer el diseño más responsivo */
 

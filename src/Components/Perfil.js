@@ -6,9 +6,9 @@ import empleoImagen from '../Assets/empleoNotificacion.jpg';
 import empleoImagen2 from '../Assets/EMPLEO2.jpg';
 import empleoImagen3 from '../Assets/EMPLEO3.jpg';
 import empleoImagen4 from '../Assets/EMPLEO4.jpg';
+import Footer from "../Components/Footer";
 
 const Perfil = () => {
-
   const [userInfo, setUserInfo] = useState({
     name: "Laura González",
     location: "Cúcuta, Colombia",
@@ -91,7 +91,8 @@ const Perfil = () => {
       <div className={styles.profileContentWrapper}>
         <div className={styles.profileContent}>
 
-          <div className={styles.box}>
+          {/* Sección de Datos Básicos - Mantiene 60px de margen inferior */}
+          <div className={`${styles.box} ${styles.personalDataBox}`}>
             <div className={styles.personalDataSection}>
               <h3>Datos Básicos</h3>
               <hr className={styles.divider} />
@@ -135,9 +136,9 @@ const Perfil = () => {
             </div>
           </div>
 
-
-          <div className={styles.box}>
-            <div className={styles.section}>
+          {/* Sección de Educación - Espaciado reducido */}
+          <div className={`${styles.box} ${styles.educationBox}`}>
+            <div className={styles.educationSection}>
               <h3>Educación</h3>
               <hr className={styles.divider} />
               {editingSection === 'Educación' ? (
@@ -193,8 +194,9 @@ const Perfil = () => {
             </div>
           </div>
 
-          <div className={styles.box}>
-            <div className={styles.section}>
+          {/* Sección de Experiencia - Espaciado reducido */}
+          <div className={`${styles.box} ${styles.experienceBox}`}>
+            <div className={styles.experienceSection}>
               <h3>Experiencia</h3>
               <hr className={styles.divider} />
               {editingSection === 'Experiencia' ? (
@@ -270,7 +272,8 @@ const Perfil = () => {
             </div>
           </div>
 
-          <div className={styles.box}>
+          {/* Sección de Habilidades - Espaciado reducido */}
+          <div className={`${styles.box} ${styles.skillsBox}`}>
             <div className={styles.skillsSection}>
               <h3>Habilidades</h3>
               <hr className={styles.divider} />
@@ -302,10 +305,9 @@ const Perfil = () => {
             </div>
           </div>
 
-
         </div>
 
-
+        {/* Sección de Usuarios Sugeridos */}
         <div className={styles.suggestedFriendsSection}>
           <h3>Usuarios Sugeridos</h3>
           <ul className={styles.suggestedFriendsList}>
@@ -323,13 +325,12 @@ const Perfil = () => {
             ))}
           </ul>
 
-
+          {/* Sección de Notificaciones de Empleo */}
           <div className={styles.jobNotificationsSection}>
             <h3>Notificaciones de Empleo</h3>
             <ul className={styles.jobNotificationsList}>
               {jobNotifications.map(notification => (
                 <li key={notification.id} className={styles.jobNotificationItem}>
-
                   <img
                     src={notification.Image}
                     alt="Ícono de empleo"
@@ -343,22 +344,7 @@ const Perfil = () => {
         </div>
       </div>
 
-      <footer className={styles.footer}>
-        <div className={styles.footerContent}>
-          <div className={styles.footerSection}>
-            <h4>Sobre FemPloy</h4>
-            <p>
-              Una plataforma creada para impulsar la empleabilidad de mujeres en tecnología. Accede a cursos, oportunidades y más.
-            </p>
-          </div>
-
-
-        </div>
-        <div className={styles.footerBottom}>
-          <p>&copy; 2024 Femploy. Todos los derechos reservados.</p>
-        </div>
-      </footer>
-
+      <Footer />
     </div>
   );
 };

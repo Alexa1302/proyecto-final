@@ -1,274 +1,244 @@
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
+/* Fondo global */
+.body {
+  overflow: hidden;
+  background: linear-gradient(90deg, #9d7ac6, #a06fce, #9d78b7); /* Degradado con tonos lila */
+  font-family: 'Poppins', sans-serif;
 }
 
-.ImgFondo {
-    position: absolute;
-    object-position: center;
-    object-fit: cover;
-    height: 100%;
-    width: 100%;
-    background-image: url(../Assets/img1.png);
-    background-size: cover;
+/* Contenedor principal */
+.container {
+  display: flex;
+  width: 800px;
+  height: 500px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  margin: 50px auto;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: 0.3s;
 }
 
-:root {
-    --white-color: hsl(0, 0%, 100%);
-    --black-color: hsl(0, 0%, 0%);
+/* Sección izquierda */
+.left {
+  flex: 1;
+  background: linear-gradient(90deg, #a17ccc, #af98c4, #d2a8f0);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
 }
 
-a {
-    text-decoration: none;
+/* Sección derecha */
+.right {
+  flex: 1;
+  background: #EEEEEE; /* Fondo gris claro */
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.login {
-    position: relative;
-    height: 100vh;
-    display: grid;
-    justify-content: center;
-    align-items: center;
+/* Estilos del formulario */
+.form {
+  display: flex;
+  flex-direction: column;
 }
 
-.loginForm {
-    width: 420px;
-    position: relative;
-    margin-inline: 24px;
-    padding: 40px 16px;
-    color: var(--white-color);
-    border-radius: 15px;
-    backdrop-filter: blur(14px);
+/* Estilo de los grupos de formulario (inputs) */
+.formGroup {
+  display: flex;
+  align-items: center;
+  position: relative;
+  border-bottom: 2px solid #9B7EBD; /* Lila */
+  margin-bottom: 20px;
+  padding: 5px 0;
+  transition: 0.3s;
 }
 
+/* Efecto al hacer foco en el input */
+.formGroup:focus-within {
+  border-bottom: 2px solid #3B1E54; /* Morado oscuro */
+}
+
+/* Estilo de los inputs */
+.input {
+  flex: 1;
+  font-size: 16px;
+  color: #3B1E54; /* Morado oscuro */
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 10px 5px;
+}
+
+/* Estilo del botón principal */
+.button {
+  background: #3B1E54; /* Morado oscuro */
+  border: none;
+  color: white;
+  padding: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+  transition: 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Efecto al pasar el mouse en el botón */
+.button:hover {
+  background: #2E143F; /* Morado aún más oscuro */
+}
+
+/* Estilo del botón de registro */
+.registerButton {
+  margin-top: 20px;
+  padding: 12px;
+  font-size: 12px;
+  font-weight: bold;
+  border: none;
+  background: #9B7EBD; /* Lila */
+  color: #3B1E54; /* Morado oscuro */
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Efecto al pasar el mouse en el botón de registro */
+.registerButton:hover {
+  background: #8668A6; /* Lila más oscuro */
+}
+
+/* Estilos del login social */
+.socialLogin {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+/* Estilo del botón social */
+.socialButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #9B7EBD; /* Lila */
+  color: #3B1E54; /* Morado oscuro */
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: bold;
+  transition: 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Efecto al pasar el mouse en el botón social */
+.socialButton:hover {
+  background: #8668A6; /* Lila más oscuro */
+}
+
+/* Estilo del icono social */
+.socialIcon {
+  margin-right: 10px;
+}
+
+/* Títulos */
 .title {
-    text-align: center;
-    font-size: 32px;
-    margin-bottom: 20px;
+  font-size: 35px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #3B1E54; /* Morado oscuro */
 }
 
-.loginFields, 
-.loginBox {
-    display: grid;
+.subtitle {
+  margin-left: 100px;
+  font-size: 19px;
+  opacity: 0.8;
+  color: #3B1E54;
 }
 
-.loginFields {
-    row-gap: 20px;
-    margin-bottom: 16px;
+/* Estilos para "Olvidaste tu contraseña?" */
+.forgotPassword {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
-.loginInput, 
-.buttonForm {
-    outline: none;
+.forgotPasswordLink {
+  color: #3B1E54; /* Morado oscuro */
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  transition: 0.3s;
+  text-transform: uppercase;
 }
 
-.loginInput {
-    width: 90%;
-    height: 6px;
-    background: none;
-    color: var(--white-color);
-    padding-block: 20px;
-    border-radius: 20px;
+/* Efecto al pasar el mouse */
+.forgotPasswordLink:hover {
+  color: #2E143F; /* Un tono más oscuro */
 }
 
-.loginInput::placeholder {
-    color: var(--white-color);
+/* 🔹 🔹 🔹 🔹 RESPONSIVE 🔹 🔹 🔹 🔹 */
+
+/* Para pantallas medianas (tablets) */
+@media (max-width: 900px) {
+  .container {
+      width: 90%;  /* Reduce el ancho */
+      height: auto; /* Permite que se expanda según el contenido */
+      flex-direction: column; /* Pone las secciones en columna */
+  }
+
+  .left {
+      padding: 30px; /* Ajusta el espacio interno */
+  }
+
+  .right {
+      padding: 30px;
+  }
 }
 
-.checkBox {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+/* Para pantallas pequeñas (móviles) */
+@media (max-width: 600px) {
+  .container {
+      width: 95%;
+      height: auto;
+  }
 
-.check {
-    margin-bottom: 6px;
-    font-size: 13px;
-}
+  .left {
+      padding: 20px;
+      font-size: 14px; /* Reduce el tamaño de texto */
+  }
 
-.checkBox {
-    column-gap: 8px;
-}
+  .title {
+      font-size: 28px; /* Reduce tamaño del título */
+  }
 
-.checkInput {
-    width: 16px;
-    height: 16px;
-    accent-color: var(--white-color);
-}
+  .subtitle {
+      font-size: 16px;
+      margin-left: 0;
+      text-align: center;
+  }
 
-.forgot {
-    color: var(--white-color);
-    margin-left: 20%;
-}
+  .input {
+      font-size: 14px; /* Reduce tamaño de los inputs */
+  }
 
-.forgot:hover {
-    text-decoration: underline;
-}
+  .button, .registerButton, .socialButton {
+      font-size: 14px;
+      padding: 10px;
+  }
 
-.loginButton {
-    width: 100%;
-    padding: 16px;
-    margin-bottom: 16px;
-    border-radius: 16px;
-    background-color: #fff;
-    color: white;
-    font-weight: 500;
-    cursor: pointer;
-    border: 2px solid var(--white-color);
-}
-
-.separator {
-    width: calc(100% - 20px);
-    display: grid;
-    grid-template-columns: 4fr 1fr 4fr;
-    gap: 10px;
-    margin: 0 10px;
-    margin-top: 5px;
-    margin-bottom: 16px;
-}
-
-.separator > p {
-    display: block;
-    text-align: center;
-    font-size: 15px;
-    font-weight: 500;
-    color: #fff;
-    margin: auto;
-}
-
-.hr {
-    border: 1px solid #ddd;
-}
-
-.signIn {
-    display: flex;
-    gap: 15px;
-}
-
-.google {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-radius: 10px;
-    cursor: pointer;
-    width: 60%;
-    height: 60px;
-    padding: 0 30px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-}
-
-.buttonForm {
-    border-radius: 10px;
-    cursor: pointer;
-    width: 74%;
-    height: 40px;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    color: black;
-    padding: 0 30px;
-    background-color: #fff;
-    border: 4px solid #fff;
-}
-
-.Register {
-    font-size: 13px;
-    text-align: center;
-    background-color: #fff;
-    color: black;
-    border-radius: 10px;
-    cursor: pointer;
-    width: 40%;
-    height: 50px;
-    padding: 0 30px;
-    background-color: #fff;
-    border: 4px solid #fff;
-    margin-right: 10%;
-}
-
-a {
-    font-size: medium;
-    color: purple;
-}
-
-.pGoogle {
-    color: black;
-    font-size: 12px;
-}
-
-/* Media Queries for Responsiveness */
-
-@media (max-width: 768px) {
-    .loginForm {
-        width: 90%; /* Full width with some padding */
-        padding: 20px 10px;
-    }
-
-    .title {
-        font-size: 28px; /* Slightly smaller title */
-    }
-
-    .loginInput, .buttonForm {
-        width: 100%; /* Make inputs and button full-width */
-    }
-
-    .forgot {
-        margin-left: 0; /* Remove left margin for smaller screens */
-        font-size: 14px;
-    }
-
-    .loginButton {
-        padding: 14px; /* Slightly smaller button padding */
-    }
-
-    .separator {
-        grid-template-columns: 1fr 1fr 1fr; /* More balanced separator for mobile */
-    }
-
-    .signIn {
-        flex-direction: column; /* Stack social media buttons vertically */
-    }
-
-    .google {
-        width: 100%; /* Make Google button full width */
-        margin-bottom: 15px; /* Add space between buttons */
-    }
-
-    .buttonForm {
-        width: 100%; /* Make button full-width */
-    }
-
-    .Register {
-        width: 80%; /* Make Register button take up more space */
-        margin: 0 auto;
-    }
-}
-
-@media (max-width: 480px) {
-    .loginForm {
-        width: 95%; /* Make the form take almost the full screen width */
-        padding: 15px 8px;
-    }
-
-    .title {
-        font-size: 24px; /* Even smaller font for small screens */
-    }
-
-    .loginButton, .buttonForm {
-        padding: 12px; /* Make buttons more compact */
-    }
-
-    .separator {
-        margin: 0 5px; /* Reduce margin on small screens */
-    }
-
-    .google, .buttonForm, .Register {
-        width: 100%; /* Make buttons full width */
-    }
-
-    .google {
-        height: 50px; /* Adjust the height of the Google button */
-    }
+  .socialLogin {
+      flex-direction: column;
+      gap: 10px;
+  }
 }

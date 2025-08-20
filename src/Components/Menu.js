@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBook, faClipboardCheck, faHome, faUser, faBriefcase, faBuilding, faCalendarAlt, faBell, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
 import styles from "../Styles/Menu.module.css";
@@ -8,15 +8,16 @@ import Notificaciones from "./Notificaciones";
 import { useNotificaciones } from './NotificacionesContext';
 
 const Menu = () => {
-    const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
-    const [isMenuOpen, setIsMenuOpen] = useState(true);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const location = useLocation();
+
+    //Cerra el menú cuando se cambia de página
+    useEffect(() => {
+        setIsMenuOpen(false);
+    }, [location.pathname]);
 
     // Usar el contexto para abrir y cerrar las notificaciones
     const { abrirNotificacion } = useNotificaciones(); // Obtenemos la función desde el contexto
-
-    const toggleSubMenu = () => {
-        setIsSubMenuOpen(!isSubMenuOpen);
-    };
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
@@ -34,7 +35,7 @@ const Menu = () => {
                 {isMenuOpen && 
                 <ul>
                     <li>
-                        <Link to="/"><FontAwesomeIcon icon={faHome} /> Home</Link>
+                        <Link to="/Home"><FontAwesomeIcon icon={faHome} /> Home</Link>
                     </li>
                     <li>
                         <Link to="/Perfil"><FontAwesomeIcon icon={faUser} /> Perfil</Link>
@@ -51,26 +52,8 @@ const Menu = () => {
                     <li>
                         <Link to="/Empresas"><FontAwesomeIcon icon={faBuilding} /> Empresas</Link>
                     </li>
-                    <li onClick={toggleSubMenu}>
-                        <span>
-                            <FontAwesomeIcon icon={faCalendarAlt} /> Eventos
-                        </span>
-                        {isSubMenuOpen && (
-                            <ul>
-                            <li>
-                                <Link to="/HackatonesNacionales">Hackatones Nacionales</Link>
-                            </li>
-                            <li>
-                                <Link to="/HackatonesInternacionales">Hackatones Internacionales</Link>
-                            </li>
-                            <li>
-                                <Link to="/RankingNacional">Ranking Nacional</Link>
-                            </li>
-                            <li>
-                                <Link to="/RankingInternacional">Ranking Internacional</Link>
-                            </li>
-                        </ul>
-                        )}
+                    <li>
+                        <Link to="/Eventos"><FontAwesomeIcon icon={faCalendarAlt} /> Eventos</Link>
                     </li>
                     {/* Aquí hemos cambiado el comportamiento del <Link> para manejar el click sin navegación */}
                     <li>
@@ -79,7 +62,7 @@ const Menu = () => {
                         </Link>
                     </li>
                     <li>
-                        <Link to="/Login"><FontAwesomeIcon icon={faSignOutAlt} /> Cerrar Sesión</Link>
+                        <Link to="/"><FontAwesomeIcon icon={faSignOutAlt} /> Cerrar Sesión</Link>
                     </li>
                 </ul>
                 }

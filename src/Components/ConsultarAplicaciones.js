@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styles from "../Styles/ConsultarAplicaciones.module.css";
+import Footer from "../Components/Footer";
 
 const ConsultarAplicaciones = () => {
   const [paises, setPaises] = useState([]);  // Guardamos los países en el estado
@@ -157,9 +158,7 @@ const ConsultarAplicaciones = () => {
           </table>
         )}
       </div>
-        <footer className={styles.footer}>
-            <p>Femploy - Empoderando Mujeres en el Trabajo</p>
-        </footer>
+        <Footer />
     </div>
   );
 };
